@@ -1,0 +1,74 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+# -------------------- Sample Product Sales Dataset --------------------
+sales_data = {
+    "Product": ["A", "B", "C", "D", "E"],
+    "Sales": [250, 400, 300, 150, 500],
+    "Revenue": [500, 900, 650, 300, 1200],
+    "ProfitMargin": [20, 25, 22, 18, 30],
+    "Region": ["North", "South", "East", "West", "North"]
+}
+
+df = pd.DataFrame(sales_data)
+
+# -------------------- 1. Bar Chart: Sales per Product --------------------
+plt.bar(df["Product"], df["Sales"], color=['skyblue','salmon','lightgreen','orange','purple'])
+plt.title("Sales of Different Products")
+plt.xlabel("Product")
+plt.ylabel("Units Sold")
+plt.legend(["Sales"])
+plt.show()
+
+# -------------------- 2. Pie Chart: Revenue Share per Product --------------------
+plt.pie(df["Revenue"], labels=df["Product"], autopct='%1.1f%%',
+        colors=sns.color_palette("pastel"))
+plt.title("Revenue Contribution by Product")
+plt.show()
+
+# -------------------- 3. Line Chart: Sales vs Product --------------------
+plt.plot(df["Product"], df["Sales"], marker='o', linestyle='--', color='blue')
+plt.title("Sales Trend by Product")
+plt.xlabel("Product")
+plt.ylabel("Sales (Units)")
+plt.legend(["Sales"])
+plt.grid(True)
+plt.show()
+
+# -------------------- 4. Scatter Plot: Sales vs Revenue --------------------
+plt.scatter(df["Sales"], df["Revenue"], color='green')
+plt.title("Sales vs Revenue")
+plt.xlabel("Sales (Units)")
+plt.ylabel("Revenue (in 000s)")
+plt.legend(["Products"])
+plt.show()
+
+# -------------------- 5. Histogram: Revenue Distribution --------------------
+plt.hist(df["Revenue"], bins=5, color='orange', edgecolor='black')
+plt.title("Revenue Distribution Across Products")
+plt.xlabel("Revenue (in 000s)")
+plt.ylabel("Frequency")
+plt.legend(["Revenue"])
+plt.show()
+
+# -------------------- 6. Heatmap: Correlation Matrix --------------------
+corr = df.corr(numeric_only=True)
+sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+plt.title("Correlation Heatmap of Sales Data")
+plt.show()
+
+# -------------------- 7. Box Plot: Sales --------------------
+plt.boxplot(df["Sales"])
+plt.title("Box Plot of Product Sales")
+plt.ylabel("Units Sold")
+plt.legend(["Sales"])
+plt.show()
+
+# -------------------- 8. Box Plot: Profit Margin --------------------
+plt.boxplot(df["ProfitMargin"])
+plt.title("Box Plot of Profit Margins")
+plt.ylabel("Profit Margin (%)")
+plt.legend(["Profit Margin"])
+plt.show()
