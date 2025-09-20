@@ -1,0 +1,81 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+# -------------------- Sample Employee Dataset --------------------
+data = {
+    "EmployeeID": range(1, 21),
+    "Experience": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                   2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+    "Salary": [25000, 28000, 30000, 32000, 35000, 37000, 40000, 42000, 45000, 48000,
+               30000, 34000, 38000, 42000, 46000, 50000, 55000, 60000, 65000, 70000],
+    "Department": ["HR", "IT", "Finance", "IT", "HR", "Finance", "IT", "Finance", "HR", "IT",
+                   "Finance", "HR", "Finance", "IT", "Finance", "IT", "HR", "Finance", "IT", "HR"],
+    "Performance": [3, 4, 2, 5, 4, 3, 5, 2, 3, 4, 
+                    5, 3, 4, 2, 4, 5, 3, 4, 5, 2],
+    "LeavesTaken": [5, 3, 7, 2, 4, 6, 1, 8, 5, 3, 
+                    2, 4, 6, 5, 3, 2, 1, 7, 4, 6]
+}
+
+df = pd.DataFrame(data)
+
+# -------------------- 1. Bar Chart: Employees per Department --------------------
+dept_counts = df["Department"].value_counts()
+plt.bar(dept_counts.index, dept_counts.values, color=['skyblue','salmon','lightgreen'])
+plt.title("Number of Employees per Department")
+plt.xlabel("Department")
+plt.ylabel("Count")
+plt.legend(["Employees"])
+plt.show()
+
+# -------------------- 2. Pie Chart: Employees per Department --------------------
+plt.pie(dept_counts.values, labels=dept_counts.index, autopct='%1.1f%%',
+        colors=['skyblue','salmon','lightgreen'])
+plt.title("Employee Distribution by Department")
+plt.show()
+
+# -------------------- 3. Line Chart: Experience vs Salary --------------------
+plt.plot(df["Experience"], df["Salary"], marker='o', linestyle='--', color='blue')
+plt.title("Employee Salary Growth with Experience")
+plt.xlabel("Experience (Years)")
+plt.ylabel("Salary")
+plt.legend(["Salary"])
+plt.grid(True)
+plt.show()
+
+# -------------------- 4. Scatter Plot: Experience vs Salary --------------------
+plt.scatter(df["Experience"], df["Salary"], color='purple')
+plt.title("Scatter Plot of Salary vs Experience")
+plt.xlabel("Experience (Years)")
+plt.ylabel("Salary")
+plt.legend(["Employees"])
+plt.show()
+
+# -------------------- 5. Histogram: Salary Distribution --------------------
+plt.hist(df["Salary"], bins=6, color='orange', edgecolor='black')
+plt.title("Salary Distribution of Employees")
+plt.xlabel("Salary")
+plt.ylabel("Frequency")
+plt.legend(["Salary"])
+plt.show()
+
+# -------------------- 6. Heatmap: Correlation Matrix --------------------
+corr = df.corr(numeric_only=True)
+sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+plt.title("Correlation Heatmap of Employee Data")
+plt.show()
+
+# -------------------- 7. Box Plot: Salary Distribution --------------------
+plt.boxplot(df["Salary"])
+plt.title("Box Plot of Employee Salaries")
+plt.ylabel("Salary")
+plt.legend(["Salary"])
+plt.show()
+
+# -------------------- 8. Box Plot: Leaves Taken --------------------
+plt.boxplot(df["LeavesTaken"])
+plt.title("Box Plot of Leaves Taken by Employees")
+plt.ylabel("Leaves Taken")
+plt.legend(["Leaves"])
+plt.show()
