@@ -1,0 +1,84 @@
+Got it 👍 I’ll make **one-line Viva Questions & Answers** from your uploaded BI Practical Questions (Tableau).
+
+---
+
+### Viva Questions & Answers (One Line)
+
+1. **Q:** How do you create a bar chart in Tableau?
+   **A:** Drag a measure to Rows and a dimension to Columns, then select Bar Chart.
+
+2. **Q:** What are variations of bar charts in Tableau?
+   **A:** Stacked, side-by-side, horizontal, and highlight bars.
+
+3. **Q:** How do you connect Tableau to a new data source?
+   **A:** Use "Connect" pane and choose file, server, or cloud source.
+
+4. **Q:** Difference between live and extract connection in Tableau?
+   **A:** Live updates data in real time, extract stores a snapshot.
+
+5. **Q:** What is a calculated field in Tableau?
+   **A:** A user-defined field created using formulas to derive new values.
+
+6. **Q:** What is a treemap in Tableau?
+   **A:** A visualization that displays hierarchical data as nested rectangles.
+
+7. **Q:** What is data blending in Tableau?
+   **A:** Combining data from multiple sources on a common field.
+
+8. **Q:** What is a cross-database join?
+   **A:** Joining tables from different databases directly in Tableau.
+
+9. **Q:** What is a set in Tableau?
+   **A:** A subset of data based on conditions or selection.
+
+10. **Q:** Difference between static and dynamic sets?
+    **A:** Static is fixed, dynamic updates with data changes.
+
+11. **Q:** What is grouping in Tableau?
+    **A:** Combining dimension members into a single group.
+
+12. **Q:** What is a box-and-whisker plot used for?
+    **A:** To show distribution, median, and outliers of data.
+
+13. **Q:** What is a dashboard in Tableau?
+    **A:** A collection of multiple visualizations in one view.
+
+14. **Q:** How do filters make a dashboard interactive?
+    **A:** By allowing users to control which data is displayed.
+
+15. **Q:** What is a scatter plot used for in Tableau?
+    **A:** To show relationships or correlations between two measures.
+
+16. **Q:** What is a histogram in Tableau?
+    **A:** A chart that shows the distribution of data into bins.
+
+17. **Q:** What is a hierarchy in Tableau?
+    **A:** An arrangement of fields for drill-down analysis.
+
+18. **Q:** What is roll-up in Tableau?
+    **A:** Aggregating data to a higher level in a hierarchy.
+
+19. **Q:** What is drill-down in Tableau?
+    **A:** Breaking down data into more detailed levels.
+
+20. **Q:** What is a slice operation in Tableau?
+    **A:** Filtering data to focus on specific criteria.
+
+21. **Q:** What is a bubble chart used for?
+    **A:** To visualize three measures with size, position, and color.
+
+22. **Q:** What is a Gantt chart in Tableau?
+    **A:** A chart showing tasks or activities over time.
+
+23. **Q:** What is a circle chart in Tableau?
+    **A:** A variation of scatter plots with circular marks.
+
+24. **Q:** How do you format a dashboard in Tableau?
+    **A:** Use the formatting pane to adjust fonts, colors, and layout.
+
+25. **Q:** What is the purpose of an interactive HR dashboard?
+    **A:** To analyze employee count, attrition, demographics, and KPIs.
+
+---
+
+👉 Do you want me to prepare a **full set of Viva Q&A (like 50–60 one-liners) covering ALL the practicals in the file**, so you can use it as a ready reference before exam?
